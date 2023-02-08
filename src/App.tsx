@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import TaskCreator from './components/TaskCreator/TaskCreator';
+import TaskList from './components/TaskList/TaskList';
 import { Task } from './types/task.model';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <main className="main-container">
       <h1>Todo Input</h1>
       <TaskCreator printTaskChild={printTaskParent} />
+      <TaskList recieveTasks={word} />
     </main>
   );
 }
