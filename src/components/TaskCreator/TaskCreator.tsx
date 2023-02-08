@@ -9,8 +9,8 @@ const TaskCreator: FC<TaskCreatorProps> = ({ printTaskChild: printText }) => {
       className="form-container"
       onSubmit={(e) => {
         e.preventDefault();
-        console.log(e.currentTarget.send.value);
         printText(e.currentTarget.send.value);
+        e.currentTarget.send.value = '';
       }}
     >
       <div className="form-container__square"></div>
